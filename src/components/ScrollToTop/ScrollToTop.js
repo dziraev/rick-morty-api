@@ -1,8 +1,11 @@
 import styles from "./ScrollToTop.module.scss"
 import { BiArrowFromBottom } from "react-icons/bi";
 import {useEffect, useState} from "react";
+import smoothscroll from "smoothscroll-polyfill"
+
 
 const ScrollToTop = () => {
+	smoothscroll.polyfill();
 	const [isVisible, setIsVisible] = useState(false);
 	const [show, setShow] = useState(false);
 
