@@ -5,7 +5,12 @@ import Loader from "../Loader/Loader";
 
 const Modal = ({ onClose, id }) => {
 	const [fetchedData, updatedFetchedData] = useState([]);
-	const { name, image, location, origin, gender, species, status } = fetchedData;
+	let { name, image, location, origin, gender, species, status, episode } = fetchedData;
+
+	if (episode) {
+		episode = episode[0].match(/episode\/(\d+)/)[1];
+	}
+
 	const API_URL  = `https://rickandmortyapi.com/api/character/${id}`
 
 	const checkStatus = (status) => {
@@ -35,7 +40,7 @@ const Modal = ({ onClose, id }) => {
 		<div onClick={onClose} className={styles.modal}>
 			<div onClick={(e) => e.stopPropagation()} className={styles.modal__container}>
 				<div className={styles.modal__picture}><img src={image} className={styles.modal__image}/></div>
-				<div className={checkStatus(status)}>{status}</div>
+				<div className={checkStatus(status)}>Status: {status} <br/> First appeared: Е{episode}</div>
 				<div className={styles.modal__body}>
 					<div className={styles.modal__text}>Name:
 						<span> {name}</span>

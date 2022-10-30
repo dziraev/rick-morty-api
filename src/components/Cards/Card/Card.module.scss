@@ -1,8 +1,8 @@
 .card {
     position: relative;
-    flex: 1 1 25%;
+    flex: 1 0 25%;
     padding: 0 15px;
-    min-width: 200px;
+    min-width: 240px;
     @media (min-width: 1140px) {
         max-width: 285px;
     }
