@@ -1,0 +1,8 @@
+.title {
+    color: #817979;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    &:not(:last-child) {
+        margin: 2rem 0;
+    }
+}

@@ -1,0 +1,35 @@
+.wrapper {
+    position: fixed;
+    bottom: 80px;
+    right: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+    @media (max-width: 991.98px) {
+        right: 10px;
+    }
+    &__show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.button {
+    height: 50px;
+    width: 50px;
+    background-color: #dc3545;
+    border-radius: 50%;
+    border: none;
+    opacity: 0.4;
+    transition: opacity 0.3s ease 0s;
+    @media (any-hover: hover ) {
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__show {
+        opacity: 1;
+    }
+}
+.arrow {
+    font-size: 1.3rem;
+}
